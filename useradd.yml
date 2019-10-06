@@ -1,13 +1,12 @@
 ---
-- hosts: "localhost"
-  connection: "local"
+- hosts: all
   vars:
     users:
     - "vasy"
     - "pety"
     - "masha"
   tasks:
-  - name: "Create user accounts"
+  - name: "Create user"
     user:
       name: "{{ item }}"
       groups: "users"
